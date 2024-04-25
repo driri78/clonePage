@@ -1,0 +1,260 @@
+@keyframes siso {
+  100% {
+    transform: translateX(-50%) rotate(2deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(-2deg);
+  }
+  0% {
+    transform: translateX(-50%) rotate(2deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+/* @keyframes frontLineAnimate {
+  0% {
+    transform: rotate(0);
+  }
+  45% {
+    transform: rotate(0);
+  }
+  55% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+} */
+@keyframes frontLineAnimate {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(90deg);
+  }
+  95% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes behindLineAnimate {
+  0% {
+    transform: rotate(90deg);
+  }
+  45% {
+    transform: rotate(90deg);
+  }
+  55% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/* .load-screen {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+} */
+body {
+  background-color: rgb(246, 255, 247);
+  height: 12000px;
+  overflow-x: hidden;
+}
+header {
+  height: 100vh;
+}
+
+.header-container {
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+.title {
+  font-size: 0;
+}
+.title-log {
+  overflow: hidden;
+  display: flex;
+  transition: 1s;
+}
+.title-log {
+  overflow: hidden;
+  display: flex;
+}
+
+.title-log li {
+  transition: 1s ease;
+}
+.title-log li:first-child {
+  transform: translateX(-158px);
+}
+.title-log li:nth-child(2n) {
+  transform: translateY(-170px);
+}
+.title-log li:nth-child(2n + 3) {
+  transform: translateY(170px);
+}
+.title-log li:last-child {
+  transform: translateX(187px);
+}
+.title-log img {
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.title-log-small {
+  display: none;
+  position: absolute;
+  top: 0;
+}
+
+.title-log-small li img {
+  transition: 0.4s;
+}
+.section04-small-content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5%;
+  height: 30%;
+  background-color: black;
+}
+.header-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 50px;
+
+  z-index: 999;
+}
+.animate-siso {
+  width: 90%;
+  height: 6px;
+  background-color: black;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: siso 4s infinite ease-in-out;
+}
+.project-request {
+  position: absolute;
+  right: 70px;
+  bottom: 10px;
+  animation: rotate 5s infinite linear;
+}
+main {
+  width: 100%;
+  height: 75%;
+  position: relative;
+  top: -272px;
+}
+.main-menu li {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.section01 {
+  position: relative;
+  width: 100%;
+  height: 15%;
+}
+.section01-container {
+  position: sticky;
+  top: calc(100vh - 272px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+}
+.section01-box,
+.section03-box {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  /* font-size: 32px; */
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+.up {
+  color: #999;
+}
+.down {
+  color: black;
+  width: 100%;
+}
+.down p {
+  display: block;
+  width: 0;
+  overflow: hidden;
+  transition: 2s;
+}
+/* .section01:hover .down p {
+  display: block;
+  width: 900px;
+} */
+.down span {
+  display: block;
+  /* width: 710px; */
+}
+.section02 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 90%;
+  height: 7%;
+  margin: auto;
+}
+.line {
+  margin-bottom: 1px;
+  width: 1px;
+  height: 20px;
+  background-color: black;
+}
+div:nth-child(-n + 25) .line {
+  animation: frontLineAnimate infinite alternate linear;
+}
+div:nth-child(n + 25) .line {
+  animation: behindLineAnimate 2s infinite alternate linear;
+}
+.section03 {
+  position: relative;
+  height: 23%;
+  display: flex;
+  justify-content: center;
+}
+.section03-container {
+  position: sticky;
+  top: 10%;
+  width: 40%;
+  height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30%;
+}
+.section03 h2 {
+  font-size: 150px;
+  /* transform: translateY(100vh); */
+  transition: 0.8s ease;
+}
+
+.section03-contents {
+  font-size: 32px;
+  transition: 0.8s;
+}
+.section03-box {
+  top: 85%;
+}
