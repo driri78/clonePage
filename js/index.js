@@ -15,7 +15,7 @@ const init = () => {
   flowText(section01Down, Section01Spans); // 초기 .down > p > span의 너비 == .down 너비
   flowText(section03Down, Section03Spans);
   fontSize(Section01Spans, 32); // 초기 section01-box span 폰트크기
-  fontSize(Section03Spans, 24);
+  fontSize(Section03Spans, 26);
 };
 
 const titleLogoTransform = function (scrollVal) {
@@ -59,7 +59,7 @@ const upSliderText = (downPs, startIndex = 0) => {
 
 const scrollFontSizeUp = (fontSize) => {
   const h2 = document.querySelector(".section03 h2");
-  if (scrollY >= 2900) {
+  if (scrollY > 2900) {
     h2.style.transform = "translateY(0)";
     h2.style.scale = "1";
   } else {
@@ -166,7 +166,6 @@ window.addEventListener("scroll", () => {
 
 //section03 p
 window.addEventListener("scroll", () => {
-  console.log(scrollY);
   const downPs = document.querySelectorAll(".section03-box.down p");
 
   if (scrollY <= 3100) {
@@ -183,18 +182,16 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("scroll", () => {
-  console.log(scrollY);
-  const section03Box = document.querySelector(".section03-box");
+  const section03Contents = document.querySelector(".section03-contents");
   if (scrollY >= 3000 && scrollY < 3700) {
     section03Contents.style.opacity = "1";
-    section03Contents.style.top = "65%";
+    section03Contents.style.transform = "translateY(0)";
   } else {
     section03Contents.style.opacity = "0";
-    section03Contents.style.top = "70%";
+    section03Contents.style.transform = "translateY(50px)";
   }
 });
 window.addEventListener("scroll", () => {
-  console.log(scrollY);
   const section03H2 = document.querySelector(".section03 h2");
   if (scrollY >= 2800 && scrollY < 3700) {
     section03H2.style.opacity = "1";

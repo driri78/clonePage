@@ -130,7 +130,7 @@ header {
   transform: translate(-50%, -50%);
   width: 5%;
   height: 30%;
-  background-color: black;
+  background-color: rgb(0, 95, 0);
 }
 .header-footer {
   width: 100%;
@@ -239,22 +239,24 @@ div:nth-child(n + 25) .line {
   position: sticky;
   top: 10%;
   width: 40%;
-  height: 70vh;
+  height: 60vh;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 30%;
 }
 .section03 h2 {
   font-size: 150px;
   /* transform: translateY(100vh); */
   transition: 0.8s ease;
+  margin: auto;
 }
 
 .section03-contents {
+  height: 20%;
   font-size: 32px;
   transition: 0.8s;
 }
 .section03-box {
-  top: 85%;
 }
